@@ -63,10 +63,15 @@
 
 .borderlessImage {
     position: absolute;
-    top: 0;
-    left: 0;
+    width: 102%;
+    height: 102%;    
+}
+
+.borderlessImageRound {
+    position: absolute;
     width: 100%;
-    height: 100%;    
+    height: 100%;
+    border-radius: 1.2em;
 }
 
 #deckName {
