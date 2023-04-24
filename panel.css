@@ -90,20 +90,20 @@
   align-items: center;
 }
 
-#welcomeScreen{
-	padding: 1.875em;
-	position: fixed;
+#welcomeScreen {
+    padding: 1.875em;
+    position: fixed;
     background-color: lightcoral;
     inset: 0px;
     margin: auto;
     display: table;
     border-radius: 1.25em;
     box-shadow: 0 0 0.625em rgba(0, 0, 0, 0.5);
-    min-width:fit-content;
+    min-width: fit-content;
     display: none;
 }
-.welcomeText{
-    margin-right: 5px; 
+.welcomeText {
+    margin-right: 5px;
     vertical-align: middle;
 }
 
@@ -258,19 +258,22 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    background-color: rgba(0, 0, 0, 0.5);
 }
+     
 #popupAgreementContent h2 {
     color: #cccccc;
   }
   
 
 #popupAgreementContent {
-    /* background-color: white; */
     padding: 20px;
     border-radius: 5px;
-    text-align:center;
+    text-align: center;
+    max-width: 90%; /* Add max-width to limit content width on larger screens */
+    box-sizing: border-box;
 }
+
 #popupAgreementContent a {
     color: white;
   }
@@ -293,3 +296,31 @@ button {
 #EULA {
     text-decoration: underline;
   }
+
+  /* Responsive styles for mobile devices */
+@media (max-width: 767px) {
+    #popupAgreementContent {
+        padding: 10px; /* Reduce padding on mobile */
+    }
+
+    #popupAgreementContent h2 {
+        font-size: 24px; /* Reduce font size on mobile */
+    }
+
+    #popupAgreementContent p {
+        font-size: 14px; /* Reduce font size on mobile */
+    }
+
+    #popupAgreementContent label {
+        font-size: 14px; /* Reduce font size on mobile */
+    }
+
+    #popupAgreementContent button {
+        font-size: 14px; /* Reduce font size on mobile */
+        padding: 5px 10px; /* Adjust button padding on mobile */
+    }
+
+    #welcomeScreen {
+        padding: 15px; /* Reduce padding on mobile */   
+    }
+}
