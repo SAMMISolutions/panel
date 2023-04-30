@@ -6,37 +6,37 @@
 
 
 .container{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display:grid;
-    align-items: center;
-    justify-content: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display:grid;
+	align-items: center;
+	justify-content: center;
 }
 
 .deck {
 	position: absolute;
 	top: 0;
-    height: inherit;
-    width: inherit;
+	height: inherit;
+	width: inherit;
 }
 
 
 .deckButton{
-    -webkit-border-radius: 1.2em;
-    -moz-border-radius: 1.2em;
-    border-radius: 1.2em;
-    margin: 0.1em;
-    border: black;
-    box-shadow: 0.1em 0.1em 0.3em 0em rgba(0, 0, 0, 0.75);
-    user-select: none;
-    position: absolute;
-    background-color: var(--button-bg-color, #ffffff);
-    color: var(--button-text-color, #000000);
-    font-size: var(--button-font-size, 1rem);
-    padding: var(--button-padding, 0.5rem 1rem);
+	-webkit-border-radius: 1.2em;
+	-moz-border-radius: 1.2em;
+	border-radius: 1.2em;
+	margin: 0.1em;
+	border: black;
+	box-shadow: 0.1em 0.1em 0.3em 0em rgba(0, 0, 0, 0.75);
+	user-select: none;
+	position: absolute;
+	background-color: var(--button-bg-color, #ffffff);
+	color: var(--button-text-color, #000000);
+	font-size: var(--button-font-size, 1rem);
+	padding: var(--button-padding, 0.5rem 1rem);
 }
 
 .buttonText {
@@ -54,7 +54,8 @@
   color: white;
   font-weight: bold;
   text-shadow: .15em .15em black;
-  white-space: nowrap;
+  /* overflow-wrap: anywhere; */
+  margin: 0.25em
 }
 
 .noStretchImage {
@@ -62,16 +63,16 @@
 }
 
 .borderlessImage {
-    position: absolute;
-    width: 102%;
-    height: 102%;    
+	position: absolute;
+	width: 100%;
+	height: 100%;	
 }
 
 .borderlessImageRound {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: 1.2em;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border-radius: 1.2em;
 }
 
 #deckName {
@@ -79,170 +80,219 @@
 }
 
 #status{
-    margin-right: 0.6875em;
-    margin-left: auto;
-    align-items: center;
-    justify-content: center;
-    display:flex;
+	/* margin-right: 0.6875em;
+	margin-left: auto; */
+	align-items: center;
+	justify-content: center;
+	display:flex;
 }
 
-.centeredWelcomeScreen{
+/* .centeredWelcomeScreen{
   align-items: center;
-}
+} */
 
 #welcomeScreen {
-    padding: 1.875em;
-    position: fixed;
-    background-color: lightcoral;
-    inset: 0px;
-    margin: auto;
-    display: table;
-    border-radius: 1.25em;
-    box-shadow: 0 0 0.625em rgba(0, 0, 0, 0.5);
-    min-width: fit-content;
-    display: none;
+	width: 50%;
+	max-width: 22em;
+	display: flex;
+	flex-direction: row;
+	/* gap: 0.625em; */
+	/* justify-content: center; */
+	align-items: center;
+	padding: 1.875em;
+	position: fixed;
+	background-color: lightcoral;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	margin: auto;
+	border-radius: 1.25em;
+	box-shadow: 0 0 0.625em rgba(0, 0, 0, 0.5);
+	/* min-width: fit-content; */
+	display: none;
+	text-align: center;
+	flex-wrap: wrap;
 }
-.welcomeText {
-    margin-right: 5px;
-    vertical-align: middle;
+.break {
+	flex-basis: 100%;
+	height: .5em;
+  }
+.inputPair {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.checkbox {
+	position: relative;
+	/* top: -0.2em; */
+	left: -0.3em;
 }
 
-input[type='text'], input[type='password'] {
-  height: 1.25em;
+#welcomeScreen label{
+	font-size: 1rem;
+	/* font-weight: bold; */
+	/* margin-bottom: 0.5em; */
 }
 
-.welcomeMargin{
-  margin-bottom: 0.625em;
+#welcomeScreen button {
+	font-size: .8em;
+	padding: 0.5em;
+	border-radius: 1.5em;
+	/* margin-bottom: 0.5em; */
+	margin-right: 0.5em;
+	margin-left: 0.5em;
+}
+
+#fullscreenCheckbox{
+
+}
+
+#welcomeScreen label{
+	padding-right: 0.4em;
+	padding-left: 0.4em
+	top: 0.2em;
+	position: relative;
+}
+
+#welcomeScreen label,
+#welcomeScreen input[type="text"],
+#welcomeScreen input[type="password"],{
+	width: 100%;
+	max-width: 200px;
+	/* margin-bottom: 0.5em; */
+	padding: 0.25em;
+	font-size: 1rem;
+	box-sizing: border-box;
 }
 
 button {
-    box-shadow: 0.1em 0.1em 0.3em 0em rgba(0,0,0,0.75);
-    }
-    
-.welcomeScreenButtons {
-    border-radius: 0.875em;
-    padding: 0.313em;
-    margin-left: 0.188em;
-    margin-right: 0.438em;
-}
-    
+	box-shadow: 0.1em 0.1em 0.3em 0em rgba(0,0,0,0.75);
+	}
+	
+/* .welcomeScreenButtons {
+	border-radius: 0.875em;
+	padding: 0.313em;
+	margin-left: 0.188em;
+	margin-right: 0.438em;
+} */
+	
 #deckArea {
-    position:relative;
-    top:0em;
-    left: 0em;
-}    
+	position:relative;
+	top:0em;
+	left: 0em;
+}	
 
 .backGroundImage {
   height: 100%;
   width: 100%;
   object-fit: fill;
   object-position: center;
-  top: 0.3%;
+  top: -0.3%;
   position: absolute;
 }
 
 
 .pressed {
-    transform: scale(0.95em); 
-    filter: brightness(0.8); 
-    box-shadow: 0 0 0.625em rgba(0,0,0,0.5); 
-    transition-duration: 0.2s;
+	transform: scale(0.95em); 
+	filter: brightness(0.8); 
+	box-shadow: 0 0 0.625em rgba(0,0,0,0.5); 
+	transition-duration: 0.2s;
   }
   
 
   .buttonTransition{
-    mix-blend-mode: multiply;
-    position: absolute;
-    opacity: .75;
-    -webkit-mask-image:
-    conic-gradient(
-      transparent 0deg,
-      transparent calc(var(--angle) - 10deg),
-      #000000 calc(var(--angle) + 10deg),
-      #000000 360deg
-    ),
-    conic-gradient(
-      transparent 340deg,
-      #fff 360deg
-    );
+	mix-blend-mode: multiply;
+	position: absolute;
+	opacity: .75;
+	-webkit-mask-image:
+	conic-gradient(
+	  transparent 0deg,
+	  transparent calc(var(--angle) - 10deg),
+	  #000000 calc(var(--angle) + 10deg),
+	  #000000 360deg
+	),
+	conic-gradient(
+	  transparent 340deg,
+	  #fff 360deg
+	);
   }
 
 
   
   
   @property --angle {
-    syntax: '<angle>';
-    inherits: true;
-    initial-value: -10deg;
+	syntax: '<angle>';
+	inherits: true;
+	initial-value: -10deg;
   }
   
   @keyframes scene-transition {
-    to { --angle: 370deg; }
+	to { --angle: 370deg; }
   }
   
   
 
   .buttonOver {
-    animation: pulse 200ms linear infinite;
+	animation: pulse 200ms linear infinite;
   }
   @keyframes pulse {
-    0% {transform: scale(0.95);}
-    50% {transform: scale(0.9);}
-    100% {transform: scale(1);}
+	0% {transform: scale(0.95);}
+	50% {transform: scale(0.9);}
+	100% {transform: scale(1);}
   }
 
 
 
 
   #error {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	z-index: 9999;
   }
   
   .spinner {
-    border: 0.25em solid #f3f3f3;
-    border-top: 0.25em solid #3498db;
-    border-radius: 50%;
-    width: 3.125em;
-    height: 3.125em;
-    animation: spin 1s linear infinite;
+	border: 0.25em solid #f3f3f3;
+	border-top: 0.25em solid #3498db;
+	border-radius: 50%;
+	width: 3.125em;
+	height: 3.125em;
+	animation: spin 1s linear infinite;
   }
   
   @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
   }
   
   p {
-    margin-top: 1.25em;
-    font-size: 1.5em;
-    color: #fff;
-    text-align: center;
+	margin-top: 1.25em;
+	font-size: 1.5em;
+	color: #fff;
+	text-align: center;
   }
   
   
 
   body {
-    height:100vh;
-    background-color: #7aa8d6; /* default to light mode */
+	height:100vh;
+	background-color: #7aa8d6; /* default to light mode */
   }
   
   @media (prefers-color-scheme: dark) {
-    body {
-      background-color: #122c52; /* dark mode */
-    }
+	body {
+	  background-color: #122c52; /* dark mode */
+	}
   }
   #welcomeScreen * {
-    font-family: 'Nunito', sans-serif;
+	font-family: 'Nunito', sans-serif;
   }
   
 
@@ -250,77 +300,84 @@ button {
   /* popUpAgreement */
 
   #popupAgreement {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.5);
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgba(0, 0, 0, 0.5);
 }
-     
+	 
 #popupAgreementContent h2 {
-    color: #cccccc;
+	color: #cccccc;
   }
   
 
 #popupAgreementContent {
-    padding: 20px;
-    border-radius: 5px;
-    text-align: center;
-    max-width: 90%; /* Add max-width to limit content width on larger screens */
-    box-sizing: border-box;
+	padding: 20px;
+	border-radius: 5px;
+	text-align: center;
+	max-width: 90%; /* Add max-width to limit content width on larger screens */
+	box-sizing: border-box;
 }
 
 #popupAgreementContent a {
-    color: white;
+	color: white;
   }
 
 #popupAgreementContent p {
-    margin: 0 0 10px 0;
+	margin: 0 0 10px 0;
 }
 
 #popupAgreementContent label {
-    color: white;
-    font-weight: bold;
+	color: white;
+	font-weight: bold;
 }
 
 #popupAgreementContent button {
-    margin-top: 10px;
-    padding: 5px 10px;
-    border-radius: 5px;
+	margin-top: 10px;
+	padding: 5px 10px;
+	border-radius: 5px;
 }
 
 #EULA {
-    text-decoration: underline;
+	text-decoration: underline;
   }
 
   /* Responsive styles for mobile devices */
 @media (max-width: 767px) {
-    #popupAgreementContent {
-        padding: 10px; /* Reduce padding on mobile */
-    }
+	#popupAgreementContent {
+		padding: 10px; /* Reduce padding on mobile */
+	}
 
-    #popupAgreementContent h2 {
-        font-size: 24px; /* Reduce font size on mobile */
-    }
+	#popupAgreementContent h2 {
+		font-size: 24px; /* Reduce font size on mobile */
+	}
 
-    #popupAgreementContent p {
-        font-size: 14px; /* Reduce font size on mobile */
-    }
+	#popupAgreementContent p {
+		font-size: 14px; /* Reduce font size on mobile */
+	}
 
-    #popupAgreementContent label {
-        font-size: 14px; /* Reduce font size on mobile */
-    }
+	#popupAgreementContent label {
+		font-size: 14px; /* Reduce font size on mobile */
+	}
 
-    #popupAgreementContent button {
-        font-size: 14px; /* Reduce font size on mobile */
-        padding: 5px 10px; /* Adjust button padding on mobile */
-    }
+	#popupAgreementContent button {
+		font-size: 14px; /* Reduce font size on mobile */
+		padding: 5px 10px; /* Adjust button padding on mobile */
+	}
 
-    #welcomeScreen {
-        padding: 15px; /* Reduce padding on mobile */   
-    }
+	#welcomeScreen label,
+	#welcomeScreen input[type="text"],
+	#welcomeScreen input[type="password"],
+	#welcomeScreen button {
+		font-size: 0.9rem; /* Reduce font size on mobile */
+	}
+
+	#welcomeScreen {
+		min-width: fit-content;
+	}
 }
