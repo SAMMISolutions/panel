@@ -55,7 +55,7 @@
   font-weight: bold;
   text-shadow: .15em .15em black;
   /* overflow-wrap: anywhere; */
-  margin: 0.25em
+  margin: 0.75em;
 }
 
 .noStretchImage {
